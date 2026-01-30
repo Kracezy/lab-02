@@ -1,51 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* HEADERS*/
+/* BACKGROUND DESIGNS*/
+
+body{
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  overflow: hidden;
+}
+
+/* BACKGROUND DESIGNS*/
+
+
+/* HEADER DESIGNS*/
 header {
     position: relative; 
-    height: 100px;
+    height: 12%;
   }
 
 .iconLogo {
    position: absolute;
-    left: 6px; 
-    top: 6px; 
-    width: 52px; 
-    height: 52px; 
-}
-.iconTxt {
-   position: absolute;
-    left: 150px;
-    top: 60px;  
-    font-family:'Times New Roman', Times, serif;
-    font-weight: 700; 
-    font-size: 42px;
-    white-space: nowrap; 
-    color: #C3C5CC;
+    left: 1%; 
+    top: 1%; 
+    width: 58px;
+    height: 58px; 
 }
 
-.name{
-    position: absolute; 
-    left: 1311px;           
-    top: 154px;             
-    width: 1400px;        
-    height: 154px;      
-    
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;     
-    font-size: 128px;
-    line-height: 154px;  
-    white-space: nowrap;  
-    overflow: hidden; 
+/* HEADER DESIGNS*/
+
+/* CONTENT DESIGNS*/
+.image{
+  position: absolute;
+  width: 943px;
+  height: 689px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 180px;
+  border-radius: 20px;
 }
+/* CONTENT DESIGNS*/
 
 
-body{
-  background-color: #0E0E28;
-}
+ 
