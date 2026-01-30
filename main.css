@@ -1,30 +1,51 @@
-header{
-    background: #B8B8B8;
-    opacity: 50%;
-    padding: 12px;
-    border-radius: 8px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
-ul {
-  list-style-type:none;
+* {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #333333;
+  box-sizing: border-box;
 }
 
-ul li {
-  float: left;
+/* HEADERS*/
+header {
+    position: relative; 
+    height: 100px;
+  }
+
+.iconLogo {
+   position: absolute;
+    left: 6px; 
+    top: 6px; 
+    width: 52px; 
+    height: 52px; 
+}
+.iconTxt {
+   position: absolute;
+    left: 150px;
+    top: 60px;  
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700; 
+    font-size: 42px;
+    white-space: nowrap; 
+    color: #C3C5CC;
 }
 
-ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.name{
+    position: absolute; 
+    left: 1311px;           
+    top: 154px;             
+    width: 1400px;        
+    height: 154px;      
+    
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;     
+    font-size: 128px;
+    line-height: 154px;  
+    white-space: nowrap;  
+    overflow: hidden; 
 }
 
-ul li a:hover {
-  background-color: #111111;
+
+body{
+  background-color: #0E0E28;
 }
