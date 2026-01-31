@@ -1,47 +1,232 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 /* BACKGROUND DESIGNS*/
-
 body{
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
-  overflow: hidden;
+  background-image: url('./Images/bgtrial1.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
 /* BACKGROUND DESIGNS*/
 
 
 /* HEADER DESIGNS*/
-header {
-    position: relative; 
-    height: 12%;
-  }
 
-.iconLogo {
-   position: absolute;
-    left: 1%; 
-    top: 1%; 
-    width: 58px;
-    height: 58px; 
+header {
+   position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    z-index: 1000;
+    transform: translateY(-100%); 
+    opacity: 0;
+    animation: navbarDrop 1s ease-out forwards;     
 }
 
+.iconTxt {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: -30px;
+}
+
+@keyframes navbarDrop {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav{ 
+    font-size: 18.8px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    margin-left: auto;
+    font-weight: 400;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;   
+    display: flex;
+    gap: 50px; 
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    color: #07C5FF;
+    text-shadow: 0 0 10px #07C5FF;
+}
+
+.nav a:active {
+    color: #07C5FF;
+    text-shadow: 0 0 10px #07C5FF;
+}
+
+.contactBtn {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+.contactBtn:hover {
+    background-color: #07C5FF;
+    color: white;
+    transform: translateX(-50%) scale(1.05);
+    border-color: #07C5FF;
+    box-shadow: 0 0 20px #07C5FF;
+}
+
+.contactBtn:active {
+    transform: translateX(-50%) scale(0.95);
+    background-color: #05a0cc;
+    border-color: #05a0cc;
+}
+
+.iconTxt:hover {
+    color: #07C5FF;
+    text-shadow: 0 0 10px #07C5FF;
+}
+
+.iconLogo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+} 
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logoLink:hover .iconTxt {
+    color: #07C5FF;
+}
 /* HEADER DESIGNS*/
 
 /* CONTENT DESIGNS*/
-.image{
-  position: absolute;
-  width: 943px;
-  height: 689px;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 180px;
-  border-radius: 20px;
+/* Image */
+.image {
+    position: relative;
+    align-items: center;
+    opacity: 100%;
+    height: 100vh;
+    z-index: 10;
+     animation: slideUp 0.5s ease-out forwards;
+    animation-delay: 0.5s;
 }
-/* CONTENT DESIGNS*/
+
+.image img {
+    position: absolute;
+    bottom: 0;
+    left: 43%;
+    transform: translateX(-50%);
+    width: 400px;
+    height:445px;
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
- 
+/* Texts */
+
+.BigName {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 120px;
+    color: white;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+}
+
+.jobTitle{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 85px;
+    color: white;
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.jobTitle1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 85px;
+    color: white;
+    position: absolute;
+    top: 200px;
+    left: 74%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.HomeTxt{
+   font-family: 'Inter', sans-serif;
+    font-weight:400;
+    font-size: 20px;
+    text-align: justify;
+    color: white;
+    position: absolute;
+    top: 330px;
+    left: 14%;
+    width: 250px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.contactBtn {
+    position: absolute;
+    top: 460px;
+    left: 14%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* smooth hover & click animations */
+    z-index: 100;
+}
+
+
