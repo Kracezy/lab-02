@@ -17,7 +17,7 @@
 
 
 <body>
- <header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md">
+ <header class="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md">
   <div class="container mx-auto px-6 flex items-center justify-between py-4">
     
     <div class="flex items-center gap-10">
@@ -40,17 +40,51 @@
   </div>
 </header>
 
- <section 
+<section
     id="home"
-    class="mb-20 py-20 container mx-auto px-6 min-h-screen flex flex-col justify-center bg-pink-900"
- >     
+    class="mb-20 pt-32 px-6 min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center text-white"
+>
+    <!-- Text container -->
+    <div class="lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
+            KRISTINE GRACE ANALASAN
+        </h1>
+
+        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#07C5FF]">
+            WEB
+        </h3>
+
+        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#07C5FF] mb-4">
+            DEVELOPER
+        </h3>
+
+        <p class="text-gray-300 text-base sm:text-lg lg:text-xl max-w-lg mx-auto lg:mx-0 mb-8">
+            I am a Web Developer. Crafting intuitive and engaging digital experiences through thoughtful design.
+        </p>
+
+        <!-- Button -->
+        <a href="#contact"
+           class="inline-block mt-4 rounded-full bg-[#07C5FF] text-black transition duration-300 text-xs font-semibold
+           tracking-widest border border-transparent px-8 py-4
+           hover:bg-white hover:text-[#07C5FF] hover:border hover:border-[#07C5FF] md:px-12 md:text-sm animate-pulse" >
+           Get in Touch
+        </a>    
+    </div>
+
+    <!-- Image container -->
+    <div class="flex justify-center">
+        <img src="./Images/IMG_20251219_184017.jpg" 
+             alt="Profile Picture" 
+             class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl">
+    </div>
+</section>
 
 
- </section>
- 
+
+
  <section 
     id="contact"
-    class="mb-20 py-20 container mx-auto px-6 min-h-screen flex flex-col justify-center bg-black">
+    class="mb-20 py-20 container mx-auto px-6 min-h-screen flex flex-col justify-center">
 
     <form class='w-full max-w-lg lg:max-w-xl mx-auto' id='contact-form' method='POST' name='contact'>
     <input type="hidden" name="form-name" value="contact" />
@@ -160,6 +194,13 @@
 
  </section>
 
+
+<section class="wavy">
+    <div class="wave">"wave wave1</div>
+    <div class="wave">"wave wave2</div>
+    <div class="wave">"wave wave3</div>
+    <div class="wave">"wave wave4</div>
+</section>
 </body>
 
 
