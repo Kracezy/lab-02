@@ -2,68 +2,166 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tine</title>
     <link rel="stylesheet" href="./main.css" />
     <link rel="icon" type="image/png" href="./Images/Icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <!-- <script src="./script.js" defer></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+
+
 </head>
+
+
 <body>
+ <header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md">
+  <div class="container mx-auto px-6 flex items-center justify-between py-4">
     
-
-  <header>
-        <div class="iconLogo">
-            <img src="./Images/Icon.png" alt="Logo">
-        </div>
-
-        <div class="iconTxt">
-           KRISTINE GRACE ANALASAN
-        </div>    
-
-
-        <nav class="nav">
-            <a href="#home" class="active"> Home </a>
-            <a href="#" class="active"> About Me </a>
-            <a href="#" class="active"> Services </a>
-            <a href="#" class="active"> Skills </a>
-            <a href="#" class="active"> Contact </a>
-        </nav>
-
-    </header>
-
-
-    <section class="home" id="home">
-
-        <div class="image">
-            <img src="./Images/HomeImage.png" alt="Profile Picture">
-        </div>
-        
-      <div class="HomeContents">
-            <h1 class="BigName">
-                KRISTINE ANALASAN
-            </h1>
-            <h3 class= jobTitle>
-                UI/UX 
-            </h3>
-             <h3 class= jobTitle1>
-                DESIGNER
-            </h3>
-            <p class="HomeTxt">
-                I am a UI/UX Designer.
-                Crafting intuitive and engaging 
-                digital experiences through thoughtful 
-                design.
-            </p>
-
-            <button class="contactBtn">
-                Get in touch
-            </button>
+    <div class="flex items-center gap-10">
+      <div class="iconLogo">
+        <img src="./Images/Icon.png" alt="Logo" class="h-10 w-10 object-contain">
       </div>
-        
+      <div class="iconTxt text-white font-bold text-lg">
+        KRISTINE GRACE ANALASAN
+      </div>
+    </div>
 
-    </section>
+    <nav class="hidden md:flex gap-8 text-white font-medium">
+      <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+      <a href="#about" class="hover:text-cyan-400 transition">About Me</a>
+      <a href="#services" class="hover:text-cyan-400 transition">Services</a>
+      <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+      <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+ <section 
+    id="home"
+    class="mb-20 py-20 container mx-auto px-6 min-h-screen flex flex-col justify-center bg-pink-900"
+ >     
+
+
+ </section>
+ 
+ <section 
+    id="contact"
+    class="mb-20 py-20 container mx-auto px-6 min-h-screen flex flex-col justify-center bg-black">
+
+    <form class='w-full max-w-lg lg:max-w-xl mx-auto' id='contact-form' method='POST' name='contact'>
+    <input type="hidden" name="form-name" value="contact" />
+
+       <div class="border border-[#07C5FF] px-10 py-10 w-full max-w-3xl mx-auto rounded-xl">
+            <h2 class="text-3xl text-[#07C5FF] font-bold text-center mb-12 animate-bounce">
+            Get in Touch
+            </h2>
+
+            <div class="mb-5">
+            <input
+                id="form-name"
+                name="name"
+                type="text"
+                placeholder="Enter your name"
+                class="w-full px-4 py-2 border focus:outline-none focus:border-[#07C5FF] rounded-xl"
+                required
+            />
+
+            </div>
+
+            <div class="mb-5">
+            <input
+                id="form-number"
+                name="number"
+                type="tel"
+                placeholder="Enter your contact number"
+                class="w-full px-4 py-2 border focus:outline-none focus:border-[#07C5FF] rounded-xl"
+                required
+            />
+            
+            
+            </div>
+            <div class="mb-5">
+            <input
+                id="form-email"
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                class="w-full px-4 py-2 border focus:outline-none focus:border-[#07C5FF] rounded-xl TEXT"
+                required
+            />
+            </div>  
+            <div class="mb-5">
+            <textarea
+                id="form-message"
+                name="message"
+                rows="4"
+                placeholder="Enter your message"
+                class="w-full px-4 py-2 border focus:outline-none focus:border-[#07C5FF] rounded-xl"
+                required
+            ></textarea>
+            </div>
+
+            <button
+                type="submit"
+                class=" rounded-full cta-dark w-full bg-[#07C5FF] text-black transition duration-300 text-xs font-semibold
+                 tracking-widest border border-transparent px-6 py-5 mt-4 xl:mt-5
+                  hover:bg-white hover:text-[#07C5FF] hover:border hover:border-[#07C5FF] md:px-12 md:text-sm">
+            Submit
+            </button>
+
+             
+            <h2 class="text-gray-100 font-sans italic text-center mt-5 mb-5">
+                or contact me on
+            </h2>
+
+            <div class="flex items-center gap-4 justify-center">
+                <!-- FACEBOOK icon -->
+                    <a href="https://www.facebook.com/kristinessi/" target="_blank" rel="noopener noreferrer">
+                        <img class="w-8 h-8 md:w-10 md:h-10" 
+                        src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" 
+                        alt=""> 
+                    </a>
+                <!-- INSTAGRAM ICON -->
+                    <a href="https://www.instagram.com/tine.nw?igsh=YzYxaHU0bHdmbnpy" target="_blank" rel="noopener noreferrer">
+                        <img class="w-8 h-8 md:w-10 md:h-10" 
+                        src="https://cdn-icons-png.flaticon.com/128/4138/4138124.png" 
+                        alt="">
+                    </a>
+                
+                <!-- LINKEDIN ICON -->
+                    <a href="https://ph.linkedin.com/in/kristine-grace-analasan-b4a115333" target="_blank" rel="noopener noreferrer">
+                        <img class="w-8 h-8 md:w-10 md:h-10" 
+                        src="https://cdn-icons-png.flaticon.com/128/4494/4494497.png" 
+                        alt="">
+                    </a>
+                
+                <!-- DISCORD ICON -->
+                    <a href="https://discordapp.com/users/601748443005976597s" target="_blank" rel="noopener noreferrer">
+                        <img class="w-8 h-8 md:w-10 md:h-10" 
+                        src="https://cdn-icons-png.flaticon.com/128/3670/3670157.png" 
+                        alt="">
+                    </a>
+                
+            </div>
+        </div>
+    
+    </form>
+
+    <div
+        id="form-message-success"
+        class="mt-6 text-sm font-medium px-4 py-2 rounded w-full max-w-lg lg:max-w-xl mx-auto h-10 opacity-0"
+        aria-hidden="true">
+    </div>
+
+
+ </section>
 
 </body>
+
+
+
 </html>
