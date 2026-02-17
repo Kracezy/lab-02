@@ -10,41 +10,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
-
-
 </head>
 
-
 <body>
- <header class="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md">
-  <div class="container mx-auto px-6 flex items-center justify-between py-4">
-    
-    <div class="flex items-center gap-10">
-      <div class="iconLogo">
-        <img src="./Images/Icon.png" alt="Logo" class="h-10 w-10 object-contain">
-      </div>
-      <div class="iconTxt text-white font-bold text-lg">
+<div id="magic-background"></div>
+<script src="script.js"></script>
+
+ <header class="sticky top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <div class="flex items-center gap-3">
+      <img src="./Images/Icon.png" alt="Logo"
+           class="h-8 w-8 object-contain">
+      <span class="text-white font-semibold text-sm sm:text-base tracking-wide">
         KRISTINE GRACE ANALASAN
-      </div>
+      </span>
     </div>
 
-    <nav class="hidden md:flex gap-8 text-white font-medium">
+    <nav class="hidden md:flex items-center gap-6 text-sm text-white font-medium">
       <a href="#home" class="hover:text-cyan-400 transition">Home</a>
-      <a href="#about" class="hover:text-cyan-400 transition">About Me</a>
-      <a href="#services" class="hover:text-cyan-400 transition">Services</a>
-      <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+      <a href="#about" class="hover:text-cyan-400 transition">About</a>
+      <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
       <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
     </nav>
 
+    <button id="menu-btn" class="md:hidden text-white text-2xl">
+      ☰
+    </button>
+
   </div>
+
+  <div id="mobile-menu"
+       class="hidden md:hidden flex flex-col items-center gap-6 py-6 bg-black text-white text-sm">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
 </header>
 
-<section
+
+<main>
+   <section
     id="home"
     class="mb-20 pt-32 px-6 min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center text-white"
 >
-    <!-- Text container -->
     <div class="lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
             KRISTINE GRACE ANALASAN
@@ -62,7 +73,6 @@
             I am a Web Developer. Crafting intuitive and engaging digital experiences through thoughtful design.
         </p>
 
-        <!-- Button -->
         <a href="#contact"
            class="inline-block mt-4 rounded-full bg-[#07C5FF] text-black transition duration-300 text-xs font-semibold
            tracking-widest border border-transparent px-8 py-4
@@ -71,7 +81,6 @@
         </a>    
     </div>
 
-    <!-- Image container -->
     <div class="flex justify-center">
         <img src="./Images/IMG_20251219_184017.jpg" 
              alt="Profile Picture" 
@@ -79,13 +88,94 @@
     </div>
 </section>
 
+<section id="about" class="min-h-screen flex items-center justify-center px-6 bg-black">
+  <div class="max-w-6xl w-full grid md:grid-cols-2 gap-16 items-center">
 
+
+    <div class="flex justify-center md:justify-start">
+      <img src="Images/599626354_2321807651669984_2724650831557808988_n.jpg"
+           alt="About Me Image"
+           class="w-100 h-[450px] object-cover rounded-2xl shadow-2xl">
+    </div>
+
+    <!-- RIGHT SIDE CONTENT -->
+    <div class="text-white">
+
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6">
+        About Me
+      </h2>
+
+      <p class="text-gray-300 text-lg mb-10 leading-relaxed">
+        I am a dedicated web developer that likes to make neat and
+        web apps that are responsive. I concentrate on creating organized code and
+        designing simple user interfaces that deliver seamless experiences.
+      </p>
+
+      <h3 class="text-xl font-semibold mb-4">
+        Have basic skills in:
+      </h3>
+
+      <div class="grid grid-cols-2 gap-8 text-gray-300 text-lg">
+        <ul class="space-y-3 list-disc list-inside">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+
+        <ul class="space-y-3 list-disc list-inside">
+          <li>Java</li>
+          <li>C#</li>
+          <li>Python</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects container mx-auto px-6 py-20">
+<h2 class="text-3xl text-white font-bold mb-8">Projects</h2>
+
+    <div class="projects-grid">
+        <article class="project-card">
+            <div class="project-image" style="background-image:url('Images/AttendanceSystem.png')" aria-hidden="true"></div>
+            <h3 class="project-title">Attendance System</h3>
+            <p class="project-desc">An attendance monitoring system where it monitors every student's attendance in real-time.</p>
+            <a class="project-link" href="#" target="_blank" rel="noopener">View Project</a>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image" style="background-image:url('./Images/EMS.png')" aria-hidden="true"></div>
+            <h3 class="project-title">Employee Management System</h3>
+            <p class="project-desc">A system that manages employee information and records as well as payroll and salary.</p>
+            <a class="project-link" href="#" target="_blank" rel="noopener">View Project</a>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image" style="background-image:url('./Images/Clinic.png')" aria-hidden="true"></div>
+            <h3 class="project-title">Dental Clinic Management System</h3>
+            <p class="project-desc">A system that manages dental clinic operations and patient records.</p>
+            <a class="project-link" href="#" target="_blank" rel="noopener">View Project</a>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image" style="background-image:url('./Images/OrderingSystem.png')" aria-hidden="true"></div>
+            <h3 class="project-title">Ordering System</h3>
+            <p class="project-desc">A kiosk like ordering system for computer parts.</p>
+            <a class="project-link" href="#" target="_blank" rel="noopener">View Project</a>
+        </article>
+    </div>
+
+    <div id="overlay">
+
+        
+    </div>
+</section>
 
 
  <section 
     id="contact"
-    class="mb-20 py-20 container mx-auto px-6 min-h-screen flex flex-col justify-center">
-
+    class="section container mx-auto px-6 flex flex-col justify-center">
     <form class='w-full max-w-lg lg:max-w-xl mx-auto' id='contact-form' method='POST' name='contact'>
     <input type="hidden" name="form-name" value="contact" />
 
@@ -190,17 +280,19 @@
         class="mt-6 text-sm font-medium px-4 py-2 rounded w-full max-w-lg lg:max-w-xl mx-auto h-10 opacity-0"
         aria-hidden="true">
     </div>
-
-
  </section>
 
+ <footer class="custom-footer">
+  <div class="footer-item">Call: 09937789178</div>
+  <div class="footer-item">Kristine Grace Analasan</div>
+  <div class="footer-item">Mail: Davao City, Philippines</div>
+</footer>
 
-<section class="wavy">
-    <div class="wave">"wave wave1</div>
-    <div class="wave">"wave wave2</div>
-    <div class="wave">"wave wave3</div>
-    <div class="wave">"wave wave4</div>
-</section>
+</main>
+
+
+ 
+
 </body>
 
 
